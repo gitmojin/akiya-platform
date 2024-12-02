@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary colors (Beige/Brown) */
+  --color-primary-100: #DECEBD; /* Lightest */
+  --color-primary-200: #DCC8B4;
+  --color-primary-300: #D4B89D;
+  --color-primary-400: #B5A08C;
+  --color-primary-500: #AE9D8D; /* Darkest */
+
+  /* Secondary colors #1 (Pink/Rose) */
+  --color-secondary-100: #DEBDBD; /* Lightest */
+  --color-secondary-200: #DCB4B4;
+  --color-secondary-300: #D49D9D;
+  --color-secondary-400: #B58C8C;
+  --color-secondary-500: #AE8D8D; /* Darkest */
+
+  /* Secondary colors #2 (Light Beige) */
+  --color-secondary-alt-100: #DED5BD; /* Lightest */
+  --color-secondary-alt-200: #DCD1B4;
+  --color-secondary-alt-300: #D4C59D;
+  --color-secondary-alt-400: #B5AB8C;
+  --color-secondary-alt-500: #AEA68D; /* Darkest */
+
+  /* Accent/Complement colors (Blue/Grey) */
+  --color-accent-100: #768689; /* Lightest */
+  --color-accent-200: #708388;
+  --color-accent-300: #627D83;
+  --color-accent-400: #576B70;
+  --color-accent-500: #58686C; /* Darkest */
+}
+
+body {
+  @apply bg-primary-100 text-accent-500;
+  font-family: 'Mochiy Pop One', sans-serif;
+}
+
+/* Map specific styles */
+.mapboxgl-map {
+  width: 100%;
+  height: 100%;
+}
+
+.mapboxgl-ctrl-bottom-right {
+  bottom: 0;
+  right: 0;
+}
+
+.mapboxgl-ctrl-attrib {
+  background-color: rgba(255, 255, 255, 0.7) !important;
+  padding: 2px 5px !important;
+  border-radius: 4px !important;
+  font-size: 10px !important;
+}
+
+/* Hide scrollbar but maintain functionality */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Add to globals.css */
+.mapboxgl-popup-content {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--color-primary-200);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+
+
+.mapboxgl-popup-tip {
+  border-top-color: var(--color-primary-200) !important;
+}
+
+/* Add to globals.css */
+
+/* Add to globals.css */
+
+.mapboxgl-popup {
+  z-index: 1;
+}
+
+.mapboxgl-popup-content {
+  padding: 0 !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid var(--color-primary-200);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  overflow: hidden;
+}
+
+.mapboxgl-popup-close-button {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: var(--color-primary-100) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  margin: 4px !important;
+}
+
+.mapboxgl-popup-close-button:hover {
+  background: var(--color-primary-200) !important;
+}
+
+.marker-container {
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.marker-container:hover {
+  z-index: 2;
+}
+
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Add smooth scroll behavior */
+.snap-x {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.snap-center {
+  scroll-snap-align: center;
+}
+
+/* Add to globals.css */
+
+/* Prevent text selection */
+* {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection in input fields */
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Improved popup styles */
+.mapboxgl-popup {
+  z-index: 1;
+}
+
+.mapboxgl-popup-content {
+  padding: 0 !important;
+  border-radius: 0.75rem !important;
+  border: 1px solid var(--color-primary-200);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+  overflow: hidden;
+}
+
+.mapboxgl-popup-close-button {
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  background: var(--color-primary-100) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  padding: 0 !important;
+  line-height: 1 !important;
+  margin: 4px !important;
+  color: var(--color-accent-500) !important;
+  border: 1px solid var(--color-primary-200) !important;
+}
+
+.mapboxgl-popup-close-button:hover {
+  background: var(--color-primary-200) !important;
+}
+
+/* Add to globals.css */
+html, body {
+  position: fixed;
+  overflow: hidden;
+  overscroll-behavior-y: none;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  overflow: hidden;
+}
