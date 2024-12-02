@@ -1,6 +1,7 @@
 // app/layout.tsx
 import './globals.css'
 import type { Metadata } from 'next'
+import { Providers } from './providers'
 
 export const metadata: Metadata = {
   title: 'Akiya Find',
@@ -16,7 +17,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="h-full overflow-hidden">
       <body className="h-full fixed inset-0 overflow-hidden">
-        {children}
+        <Providers>
+          {children}
+        </Providers>
       </body>
     </html>
   )

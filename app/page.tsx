@@ -20,7 +20,7 @@ const MapComponent = dynamic(
 )
 
 export default function Home() {
-  console.log('=== Home Component Rendering ===');
+  console.log('=== Home Component Mounting ===')
   const [selectedProperty, setSelectedProperty] = useState<Property | null>(null)
 
   return (
@@ -32,13 +32,10 @@ export default function Home() {
           onPropertySelect={setSelectedProperty}
         />
       </div>
-      <div key="bottom-panel-container">
-        <BottomPanel 
-          key="bottom-panel"
-          onPropertySelect={setSelectedProperty}
-          selectedProperty={selectedProperty}
-        />
-      </div>
+      <BottomPanel 
+        onPropertySelect={setSelectedProperty}
+        selectedProperty={selectedProperty}
+      />
     </main>
   )
 }
